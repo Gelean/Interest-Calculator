@@ -4,23 +4,20 @@ using namespace std;
 
 void main()
 {
+	float principal = 0.0, rate = 0.0, compound = 0.0, years = 0.0, accum = 0.0, exponent = 0.0, totalAccum = 0.0;
 
-	float deposit = 0.0;
-	float rate = 0.0;
-	float compound = 0.0;
-	float years = 0.0;
-
-	cout<<"Enter the initial deposit: ";
-	cin>>deposit;
+	cout<<"Enter the principal amount: ";
+	cin>>principal;
 	cout<<"Enter the annual interest rate percent: ";
 	cin>>rate;
-	cout<<"Enter the number of times the compounding is done per year: ";
+	cout<<"Enter the number of times the compounding occurs per year: ";
 	cin>>compound;
-	cout<<"Enter the number of years the deposit will be left to build interest: ";
+	cout<<"Enter the number of years the principal will be left to build interest: ";
 	cin>>years;
-	//(rate/100) Takes the rate and converts it from a percent to a fraction
-	float accum = (1+((rate/100)/compound));
-	float exponent = years*compound;
-	cout<<"The accumulation after "<<years<<" years is: "<<deposit*pow(accum,exponent)<<endl;
-
+	
+	accum = (1 + ((rate / 100) / compound));
+	exponent = years * compound;
+	totalAccum = principal * pow(accum,exponent);
+	
+	cout<<"The accumulation after "<<years<<" years is: "<<totalAccum<<endl;
 }
