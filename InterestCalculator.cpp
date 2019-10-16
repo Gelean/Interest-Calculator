@@ -17,7 +17,7 @@ void main()
 	
 	accum = (1 + ((rate / 100) / compound));
 	exponent = years * compound;
-	totalAccum = principal * pow(accum,exponent);
+	totalAccum = principal * pow(accum, exponent);
 	
 	cout<<"The accumulation after "<<years<<" years is: "<<totalAccum<<endl;
 }
